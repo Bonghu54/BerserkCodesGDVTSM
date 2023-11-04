@@ -1,0 +1,48 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Roles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rol[0].Nombre_Rol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rol[0].Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rol[0].FechaHora_de_registro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Rol) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Rol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHora_de_registro)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id_Rol">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id_Rol">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id_Rol">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
