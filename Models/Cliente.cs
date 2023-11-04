@@ -6,6 +6,7 @@ namespace BerserkCodesGDVTSM.Models
     {
         [Key]
         public int Id_Persona { get; set; }
+        [DataType(DataType.Date)]
         public DateTime FechaHora_de_registro { get; set; }
         public string Tipo_Cliente { get; set; }
     }

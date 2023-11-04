@@ -13,6 +13,7 @@ namespace BerserkCodesGDVTSM.Models
         public string Correo_Electronico { get; set; }
         [Required]
         public string Contrasena { get; set; }
+        [DataType(DataType.Date)]
         public DateTime FechaHora_de_registro { get; set; }
         public int fk_Id_Rol { get; set; }
     }
