@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using BerserkCodesGDVTSM.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BerserkCodesGDVTSMContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BerserkCodesGDVTSMContext") ?? throw new InvalidOperationException("Connection string 'BerserkCodesGDVTSMContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

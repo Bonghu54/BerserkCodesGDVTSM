@@ -1,0 +1,60 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Usuarios.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].Nombre_Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].Correo_Electronico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].Contrasena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].FechaHora_de_registro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].fk_Id_Rol)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Usuario) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo_Electronico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contrasena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHora_de_registro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fk_Id_Rol)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id_Usuario">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id_Usuario">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id_Usuario">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

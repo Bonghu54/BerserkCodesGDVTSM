@@ -11,6 +11,6 @@ namespace BerserkCodesGDVTSM.Models
         public DateTime FechaHora_de_Registro { get; set; }
         public string Puesto { get; set; }
         public string Departamento { get; set; }
-        public DateOnly Fecha_Contratacion { get; set; }
+        public DateTime Fecha_Contratacion { get; set; }
     }
 }
