@@ -1,0 +1,55 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Empleados.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Empleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Empleado.pk_fk_Id_Persona" />
+            <div class="form-group">
+                <label asp-for="Empleado.fk_Id_Usuario" class="control-label"></label>
+                <input asp-for="Empleado.fk_Id_Usuario" class="form-control" />
+                <span asp-validation-for="Empleado.fk_Id_Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.FechaHora_de_Registro" class="control-label"></label>
+                <input asp-for="Empleado.FechaHora_de_Registro" class="form-control" />
+                <span asp-validation-for="Empleado.FechaHora_de_Registro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.Puesto" class="control-label"></label>
+                <input asp-for="Empleado.Puesto" class="form-control" />
+                <span asp-validation-for="Empleado.Puesto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.Departamento" class="control-label"></label>
+                <input asp-for="Empleado.Departamento" class="form-control" />
+                <span asp-validation-for="Empleado.Departamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.Fecha_Contratacion" class="control-label"></label>
+                <input asp-for="Empleado.Fecha_Contratacion" class="form-control" />
+                <span asp-validation-for="Empleado.Fecha_Contratacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
