@@ -2,6 +2,6 @@
 {
     public class Persona
     {
-
+        public int Id_Persona { get; set; }
     }
 }
