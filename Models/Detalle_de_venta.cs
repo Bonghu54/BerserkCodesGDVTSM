@@ -9,6 +9,6 @@ namespace BerserkCodesGDVTSM.Models
         //public int FkIdProducto { get; set; }
         //public int FkIdVenta { get; set; }
         public int Cantidad { get; set; }
-        public decimal Precio_Producto { get; set; }}
+        public decimal Precio_Producto { get; set; }
     }
 }
