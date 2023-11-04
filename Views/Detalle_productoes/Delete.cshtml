@@ -1,0 +1,52 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Detalle_productoes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Detalle_Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalle_Producto.Color)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detalle_Producto.Color)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalle_Producto.Tipo_De_Uso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detalle_Producto.Tipo_De_Uso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalle_Producto.Durabilidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detalle_Producto.Durabilidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalle_Producto.Material)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detalle_Producto.Material)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalle_Producto.Estampado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detalle_Producto.Estampado)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Detalle_Producto.Id_Detalle_Producto" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
