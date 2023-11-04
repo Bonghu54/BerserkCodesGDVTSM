@@ -8,9 +8,11 @@ namespace BerserkCodesGDVTSM.Models
         [Key]
         public int pk_fk_Id_Persona { get; set; }
         public int fk_Id_Usuario { get; set; }
+        [DataType(DataType.Date)]
         public DateTime FechaHora_de_Registro { get; set; }
         public string Puesto { get; set; }
         public string Departamento { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Fecha_Contratacion { get; set; }
     }
 }
