@@ -21,5 +21,15 @@ namespace BerserkCodesGDVTSM.Data
         public DbSet<BerserkCodesGDVTSM.Models.Rol>? Rol { get; set; }
 
         public DbSet<BerserkCodesGDVTSM.Models.Usuario>? Usuario { get; set; }
+
+        public DbSet<BerserkCodesGDVTSM.Models.Cliente>? Cliente { get; set; }
+
+        public DbSet<BerserkCodesGDVTSM.Models.Venta>? Venta { get; set; }
+
+        public DbSet<BerserkCodesGDVTSM.Models.Detalle_de_venta>? Detalle_de_venta { get; set; }
+
+        public DbSet<BerserkCodesGDVTSM.Models.Producto>? Producto { get; set; }
+
+        public DbSet<BerserkCodesGDVTSM.Models.Detalle_Producto>? Detalle_Producto { get; set; }
     }
 }

@@ -1,0 +1,50 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Ventaos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Venta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Venta.Id_Venta" />
+            <div class="form-group">
+                <label asp-for="Venta.FechaHora_Venta" class="control-label"></label>
+                <input asp-for="Venta.FechaHora_Venta" class="form-control" />
+                <span asp-validation-for="Venta.FechaHora_Venta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Venta.FechaHora_Entrega" class="control-label"></label>
+                <input asp-for="Venta.FechaHora_Entrega" class="form-control" />
+                <span asp-validation-for="Venta.FechaHora_Entrega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Venta.Estado_Seguimiento" class="control-label"></label>
+                <input asp-for="Venta.Estado_Seguimiento" class="form-control" />
+                <span asp-validation-for="Venta.Estado_Seguimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Venta.Total_Venta" class="control-label"></label>
+                <input asp-for="Venta.Total_Venta" class="form-control" />
+                <span asp-validation-for="Venta.Total_Venta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

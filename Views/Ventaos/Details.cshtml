@@ -1,0 +1,43 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Ventaos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Venta.FechaHora_Venta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Venta.FechaHora_Venta)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Venta.FechaHora_Entrega)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Venta.FechaHora_Entrega)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Venta.Estado_Seguimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Venta.Estado_Seguimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Venta.Total_Venta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Venta.Total_Venta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Venta?.Id_Venta">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

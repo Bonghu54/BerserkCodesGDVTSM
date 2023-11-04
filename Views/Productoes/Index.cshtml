@@ -1,0 +1,66 @@
+﻿@page
+@model BerserkCodesGDVTSM.Views.Productoes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].Nombre_Producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].Unidad_De_Venta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].Tipo_Producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].Precio_Unitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].Cantidad_En_Stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Producto) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unidad_De_Venta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio_Unitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad_En_Stock)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id_Producto">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id_Producto">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id_Producto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
