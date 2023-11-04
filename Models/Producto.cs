@@ -12,5 +12,7 @@ namespace BerserkCodesGDVTSM.Models
         public string Tipo_Producto { get; set; }
         public decimal Precio_Unitario { get; set; }
         public int Cantidad_En_Stock { get; set; }
+        public ICollection<Detalle_Producto> Detalles_Producto { get; set; }
+
     }
 }

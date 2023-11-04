@@ -12,7 +12,7 @@ namespace BerserkCodesGDVTSM.Models
         public DateTime FechaHora_Entrega { get; set; }
         public string Estado_Seguimiento { get; set; }
         public decimal Total_Venta { get; set; }
-        //public int FkIdCliente { get; set; }
-        //public int FkIdEmpleado { get; set; }
+
+        public ICollection<Detalle_de_venta> Detalles_de_venta { get; set; }
     }
 }
